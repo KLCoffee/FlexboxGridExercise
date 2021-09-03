@@ -60,9 +60,10 @@ section:not(#three) {
   
   /* START BELOW THIS LINE */
 
-  #one {
-      display: flex;
-      justify-content: flex-end;
-      align-items: ;
-
-  }
+  #one {      
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    
+}
