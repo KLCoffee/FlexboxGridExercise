@@ -60,23 +60,48 @@ section:not(#three) {
   
   /* START BELOW THIS LINE */
 
-  #one {      
+  #one { 
+    /*Creates a Flexbox container */     
     display: flex;
+
+    /* Justifies items to end of the main axis in this case all the way to the right*/
     justify-content: flex-end;
-    flex-direction: column;
-    align-items: center;  
+
+    /*Flex-direction column displays in starting order on bottom of container. Bonus # 1. Flex-direction column-reverse displays a mirror image. */
+    /*flex-direction: column; */
+    flex-direction: column-reverse;
+
+    /*centers column in container*/
+    align-items: center; 
+     
 }
 
 #two {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-}
+    flex-wrap: wrap;}
+
+    /* Bonus #2. Using "order" to change the order in which the items occur on the page.*/
+    #orange {
+        order: 2;
+        /* Bonus 3 Align-self: flex-end and flex-start move the purple and brown boxes to the upper and lower corners of the parent box*/
+    }
+    #purple {
+        order: 3;
+        align-self: flex-end;
+    }
+
+    #brown {
+        order: 1;
+        align-self: flex-start;  
+    }
+
 
 #three {
     display: grid;
     grid-template-columns: 4fr 4fr 4fr 4fr;
     grid-template-rows: repeat(2, 100px);
 }
+    
 
